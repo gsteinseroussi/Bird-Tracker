@@ -1,12 +1,12 @@
 // require express, models
-var express = require("express");
-const db = require("../models");
-var router = express.Router();
+const express = require("express");
+//const db = require("../models");
+const router = express.Router();
 
 module.exports = function (app) {
   router.get("/", function (req, res) {
     birds.all(function (data) {
-      var hbsObject = {
+      const hbsObject = {
         birds: data,
       };
       console.log(hbsObject);
@@ -28,7 +28,7 @@ router.post("/birds", function (req, res) {
 });
 
 router.put("/birds/:id", function (req, res) {
-  var condition = "id = " + req.params.id;
+  const condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
