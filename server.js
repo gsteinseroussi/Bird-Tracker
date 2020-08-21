@@ -17,8 +17,7 @@ app.use(express.static("public"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// routes
-app.use(routes);
+// app.use(routes);
 
 // Requiring our routes
 require("./routes/html-routes.js")(app);
