@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">View a Bird</button>
+            <div class="dropdown-menu">
+                {{#each birds}}
+                {{>bird-dropdown}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-sm">
+            <button>View All Birds</button>
+        </div>
+        <div class="col-sm">
+            <button>Add a Bird</button>
+        </div>
+    </div>
+    <div>
+        <h2>Recently Spotted:</h2>
+        <row>
+            {{>recently-spotted}}
+        </row>
+    </div>
+
+    <h2>About Us:</h2>
+    <p>This website was developed by Lisa Ellison, Luke Evans, Dale Foskey, and Garrett Stein-Seroussi as a way to share
+        your recently seen birds with fellow bird lovers.</p>
+</div>
