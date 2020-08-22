@@ -2,10 +2,9 @@
 
 const db = require("../models");
 
-
 module.exports = app => {
   app.get("/api/birds", (req, res) => {
-    db.Bird.all({}).then(bird => res.json(bird));
+    db.Bird.findAll({}).then(bird => res.json(bird));
   });
 
   app.get("/api/birds/:id", (req, res) => {
