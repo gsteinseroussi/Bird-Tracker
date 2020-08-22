@@ -1,15 +1,11 @@
-const connection = require("../config/connection.js");
-const express = require('express');
-const app = express();
+// const connection = require("../config/connection.js");
+// const express = require('express');
+// const app = express();
 
-
-
-connection.connect(function(err) {
-    if (err) throw err;
-    con.query("SELECT * FROM birds", function (err, result, fields) {
-      if (err) throw err;
-      console.log(result);
-    });
-  });
-
-  
+// connection.connect(function(err) {
+//     if (err) throw err;
+//     con.query("SELECT * FROM birds", function (err, result, fields) {
+//       if (err) throw err;
+//       console.log(result);
+//     });
+//   });
