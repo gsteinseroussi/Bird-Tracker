@@ -1,5 +1,7 @@
 // require express, models
+
 const db = require("../models");
+
 
 module.exports = app => {
   app.get("/api/birds", (req, res) => {
