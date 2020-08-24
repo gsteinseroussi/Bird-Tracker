@@ -11,7 +11,6 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
 
 // handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -28,7 +27,6 @@ db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
       PORT
     );
   });
