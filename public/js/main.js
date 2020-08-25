@@ -2,13 +2,13 @@
 /* eslint-disable indent */
 $("#viewAll").on("click", () => {
     $(".popup, .popup-content").addClass("active");
-    $.get("/api/birds", data => {
-        $(data).each(() => {
-            $("<div>")
-                .addClass("card")
-                .val(this.name);
-        });
-    });
+    // $.get("/api/birds", data => {
+    //     $(data).each(() => {
+    //         $("<div>")
+    //             .addClass("card")
+    //             .val(this.name);
+    //     });
+    // });
 });
 
 $(".close, .popup").on("click", () => {
