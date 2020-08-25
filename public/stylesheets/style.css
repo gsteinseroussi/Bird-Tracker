@@ -1,20 +1,15 @@
-form.signup,
-form.login {
-  margin-top: 50px;
-}
-
-.popup-overlay {
-  visibility:hidden;
+  .popup-overlay {
+    visibility:hidden;
   }
   
   .popup-content {
-  visibility:hidden;
+    visibility:hidden;
   }
 
   .popup-overlay.active{
     visibility:visible;
-    }
+  }
     
-    .popup-content.active {
+  .popup-content.active {
     visibility:visible;
-    }
+  }
