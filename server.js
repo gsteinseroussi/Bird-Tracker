@@ -24,6 +24,7 @@ require("./routes/api-routes.js")(app);
 // app.use(routes);
 
 //adding a comment so something's different
+//adding a second comment
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync({ force: true }).then(() => {
