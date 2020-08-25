@@ -2,3 +2,19 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.popup-overlay {
+  visibility:hidden;
+  }
+  
+  .popup-content {
+  visibility:hidden;
+  }
+
+  .popup-overlay.active{
+    visibility:visible;
+    }
+    
+    .popup-content.active {
+    visibility:visible;
+    }

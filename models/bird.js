@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     activity: {
       type: DataTypes.TEXT,
       allowNull: true
+    },
+    time: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
     // time: {
     //   type: DataTypes.STRING,
