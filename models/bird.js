@@ -21,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
     time: {
       type: DataTypes.STRING,
       allowNull: true
+    },
+    imageUrl: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
   return Bird;
