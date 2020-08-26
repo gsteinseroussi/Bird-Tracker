@@ -6,7 +6,7 @@
 
         </div>
         <div class="col-sm">
-            <button id="viewAll">View All Birds</button>
+            <a href="/allBirds" id="viewAll">View All Birds</a>
         </div>
         <div class="col-sm">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBirdModal">
@@ -25,7 +25,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="addBirdForm">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Species of Bird:</label>
                             <input type="text" class="form-control" id="species" placeholder="Species">
@@ -48,12 +48,13 @@
                                 <option>Dusk</option>
                             </select>
                         </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-                <div class="modal-footer">
+                {{!-- <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary" id="saveBird">Save Bird</button>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
