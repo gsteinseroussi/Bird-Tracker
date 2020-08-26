@@ -1,4 +1,5 @@
-// require models
+// require express, models
+
 const db = require("../models");
 
 module.exports = app => {
