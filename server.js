@@ -10,8 +10,8 @@ const db = require("./models");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
+// app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 // handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -23,12 +23,14 @@ require("./routes/api-routes.js")(app);
 // routes
 // app.use(routes);
 
+//adding a comment so something's different
+//adding a second comment
+
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(() => {
+db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
       PORT
     );
   });

@@ -20,20 +20,28 @@ module.exports = (sequelize, DataTypes) => {
     },
     time: {
       type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        isTime(value) {
-          if (
-            value !== "Morning" ||
-            value !== "Dawn" ||
-            value !== "Dusk" ||
-            value !== "Afternoon"
-          ) {
-            throw new Error("Time must be one of the options provided");
-          }
-        }
-      }
+      allowNull: true
+    },
+    imageUrl: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
+    // time: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    //   validate: {
+    //     isTime(value) {
+    //       if (
+    //         value !== "Morning" ||
+    //         value !== "Dawn" ||
+    //         value !== "Dusk" ||
+    //         value !== "Afternoon"
+    //       ) {
+    //         throw new Error("Time must be one of the options provided");
+    //       }
+    //     }
+    //   }
+    // }
   });
   return Bird;
 };

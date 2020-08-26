@@ -1,29 +1,70 @@
 <div class="container">
     <div class="row">
         <div class="col-sm">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">View a Bird</button>
-            <div class="dropdown-menu">
-                {{#each birds}}
-                {{>bird-dropdown}}
-                {{/each}}
-            </div>
+
+            {{>bird-dropdown}}
+
         </div>
         <div class="col-sm">
-            <button>View All Birds</button>
+            <button id="viewAll">View All Birds</button>
         </div>
         <div class="col-sm">
-            <button>Add a Bird</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBirdModal">
+                Add a Bird
+            </button>
         </div>
     </div>
-    <div>
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" id="addBirdModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add a Bird</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Species of Bird:</label>
+                            <input type="text" class="form-control" id="species" placeholder="Species">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Location Spotted:</label>
+                            <input type="text" class="form-control" id="location" placeholder="Raleigh, NC">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Activity:</label>
+                            <input type="text" class="form-control" id="activity"
+                                placeholder="Flying, on a branch, etc.">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">Time Spotted:</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Dawn</option>
+                                <option>Morning</option>
+                                <option>Afternoon</option>
+                                <option>Dusk</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="savedBird">Save Bird</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- <div>
         <h2>Recently Spotted:</h2>
         <row>
             {{>recently-spotted}}
         </row>
-    </div>
+    </div> --}}
 
     <h2>About Us:</h2>
-    <p>This website was developed by Lisa Ellison, Luke Evans, Dale Foskey, and Garrett Stein-Seroussi as a way to share
+    <p>This website was developed by Lisa Ellison, Luke Evans, and Garrett Stein-Seroussi as a way to share
         your recently seen birds with fellow bird lovers.</p>
 </div>
