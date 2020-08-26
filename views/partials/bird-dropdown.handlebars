@@ -1,1 +1,9 @@
-<a class="dropdown-item" href="#">{{name}}</a>
+<div class="dropdown">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">View a Bird</button>
+    <div class="dropdown-menu">
+        {{#each birds}}
+        <a class="dropdown-item" href="#">{{name}}</a>
+        {{/each}}
+    </div>
+</div>

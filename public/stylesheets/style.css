@@ -13,3 +13,7 @@
   .popup-content.active {
     visibility:visible;
   }
+
+  #addModal {
+    visibility: hidden;
+  }
