@@ -1,19 +1,17 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable indent */
-// $("#viewAll").on("click", () => {
-//     $(".popup, .popup-content").addClass("active");
-//     // $.get("/api/birds", data => {
-//     //     $(data).each(() => {
-//     //         $("<div>")
-//     //             .addClass("card")
-//     //             .val(this.name);
-//     //     });
-//     // });
-// });
 
-// $(".close, .popup").on("click", () => {
-//     $(".popup, .popup-content").removeClass("active");
-// });
+$("#saveBird").submit((event) => {
+    event.preventDefault();
 
-$("#myModal").modal("toggle");
-$("#close").modal("toggle");
+    //retrieving info from input form
+    const species = $("#species").val();
+    const location = $("#location").val();
+    const activity = $("#activity").val();
+    const timeSpotted = $("#timeSpotted").val();
+
+    //flickr api call here
+
+}).then((data) => {
+    //create the bird object using the model
+});
