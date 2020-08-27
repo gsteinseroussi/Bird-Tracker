@@ -6,18 +6,22 @@ $(document).ready(() => {
 
 function renderBirdList(data) {
     data.forEach(bird => {
-        const newLi = $("<li>").val(bird.name);
+        console.log(bird);
+        const newLi = $("<li>");
         const img = $("<img />", {
             src: bird.imageUrl,
             alt: `${bird.name} image`
         });
         newLi.append(
-            `Spotted in: ${bird.location}
-            Activity: ${bird.activity} in the ${bird.time}.
+            `
+            ${bird.name}
+            Spotted in: ${bird.location}
+            Activity: ${bird.activity}
+            Time spotted: ${bird.time}
 
-            ${img}
          `
         );
         $("#birdList").append(newLi);
+        $(newLi).append(img);
     });
 }
