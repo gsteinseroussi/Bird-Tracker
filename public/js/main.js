@@ -15,10 +15,8 @@ $("#addBirdForm").submit((event) => {
 
     //retrieving info from input form
     const species = $("#species").val().trim();
-    // const location = $("#location").val().trim();
-    // const activity = $("#activity").val().trim();
-    // const timeSpotted = $("#timeSpotted").val();
-    // let imageURL = "";
+
+
 
     //flickr api call here
     const URL = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=84ecc9e2a26d8791a7b9b8b13c2be46f&text=%22" +
@@ -28,28 +26,29 @@ $("#addBirdForm").submit((event) => {
         type: "GET",
     }).then((res) => {
         console.log(res.photos.photo[0].url_q);
-        imageURL = res.photos.photo[0].url_q;
+        const imageURL = res.photos.photo[0].url_q;
+
+        const location = $("#location").val().trim();
+        const activity = $("#activity").val().trim();
+        const timeSpotted = $("#timeSpotted").val();
+
+        const newBird = {
+            name: species,
+            location: location,
+            activity: activity,
+            time: timeSpotted,
+            imageUrl: imageURL
+        };
+
+
+        $.ajax("/api/birds", {
+            type: "POST",
+            data: newBird
+        }).then(() => {
+            console.log("Successfully added bird");
+        });
+
     });
-
-    // const newBird = {
-    //     name: species,
-    //     location: location,
-    //     activity: activity,
-    //     time: timeSpotted,
-    //     imageUrl: imageUrl
-    // };
-
-    // WAIT FOR FLICKR API CALL BEFORE POST API CALL
-
-
-    // $.ajax("/api/birds", {
-    //     type: "POST",
-    //     data: newBird
-    // }).then(() => {
-    //     console.log("Successfully added bird");
-    // });
-
-
     //the .then statement will end here
 });
 
