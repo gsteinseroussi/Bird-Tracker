@@ -1,3 +1,73 @@
-<nav class="navbar navbar-light">
+{{!-- <nav class="navbar navbar-expand-sm bg-light"> --}}
+
+<!-- Links -->
+{{!-- <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li>
+    </ul> --}}
+
+
+
+<nav class="navbar navbar-expand-sm">
     <span class="navbar-brand mb-0 h1">Bird Tracker</span>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/allBirds" id="viewAll">View All Birds</a>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn" data-toggle="modal" data-target="#addBirdModal">
+                Add a Bird
+            </button>
+        </li>
+    </ul>
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" id="addBirdModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add a Bird</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addBirdForm">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Species of Bird:</label>
+                            <input type="text" class="form-control" id="species" placeholder="Species">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Location Spotted:</label>
+                            <input type="text" class="form-control" id="location" placeholder="Raleigh, NC">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Activity:</label>
+                            <input type="text" class="form-control" id="activity"
+                                placeholder="Flying, on a branch, etc.">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">Time Spotted:</label>
+                            <select id="timeSpotted" id="inputState" class="form-control">
+                                <option selected>Dawn</option>
+                                <option>Morning</option>
+                                <option>Afternoon</option>
+                                <option>Dusk</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
 </nav>
