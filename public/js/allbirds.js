@@ -7,21 +7,23 @@ $(document).ready(() => {
 function renderBirdList(data) {
     data.forEach(bird => {
         console.log(bird);
-        const newLi = $("<li>");
-        const img = $("<img />", {
-            src: bird.imageUrl,
-            alt: `${bird.name} image`
-        });
-        newLi.append(
-            `
-            ${bird.name}
-            Spotted in: ${bird.location}
-            Activity: ${bird.activity}
-            Time spotted: ${bird.time}
 
+        $("#birdList").append(
+            `
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="${bird.imageUrl}" alt="bird image">
+            <div class="card-body">
+              <h5 class="card-title">${bird.name}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Spotted: ${bird.location}</li>
+              <li class="list-group-item">Activity: ${bird.activity}</li>
+              <li class="list-group-item">Time: ${bird.time}</li>
+            </ul>
+          </div>
          `
         );
-        $("#birdList").append(newLi);
-        $(newLi).append(img);
+
     });
 }
+
