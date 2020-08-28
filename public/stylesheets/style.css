@@ -37,35 +37,5 @@
   }
 
 /* background image */
-/* body { 
-    background-image: url("https://www.pickpik.com/kingfisher-bird-wildlife-nature-animal-beak-38004"); 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-}
 
-.imgboi {
-    /* Set rules to fill background */
-    min-height: 100%;
-    min-width: 1024px;
-      
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: auto;
-      
-    /* Set up positioning */
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  
-  @media screen and (max-width: 1024px) { /* Specific to this particular image */
-    img.bg {
-      left: 50%;
-      margin-left: -512px;   /* 50% */
-    }
-  } */
-  
+

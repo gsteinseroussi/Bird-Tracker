@@ -1,0 +1,9 @@
+body { 
+    background-image: url("https://i1.pickpik.com/photos/715/348/992/kingfisher-bird-wildlife-nature-preview.jpg"); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
