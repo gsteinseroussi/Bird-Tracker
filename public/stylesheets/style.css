@@ -61,3 +61,15 @@
     color: black;
     text-align: center;
  }
+
+ #AllPage {
+   background-color: #E59E28;
+ }
+
+ .card-body {
+  background-color: #EDC177;
+ }
+
+ .list-group-item {
+   background-color: #EDC177;
+ }
