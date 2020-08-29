@@ -43,7 +43,7 @@
     color: white;
   }
     
-  /* Bottom right text */
+  /* Text Block */
   .text-block {
   top: 50px;
   display: inline-block;
@@ -59,9 +59,11 @@
     width: 100%;
     background-color: #E59E28;
     color: black;
-    text-align: center;
+    text-align: left;
+    font-size: small;
  }
 
+ /* View All Birds page background, & card body/item background */
  #AllPage {
    background-color: #E59E28;
  }
@@ -73,3 +75,11 @@
  .list-group-item {
    background-color: #EDC177;
  }
+
+ .w3-container {
+   padding: 10px;
+ }
+
+.card-deck {
+  float: left;
+}
